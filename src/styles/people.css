@@ -123,3 +123,14 @@ body {
     cursor: pointer;
     opacity: 1;
 }
+.fa-star{ 
+    color:  #D6BB77;
+}
+.notFavorite{
+    border: 1px solid #D6BB77;
+}
+
+.isFavorite {
+    background-color:  #D6BB77;
+    color: black;
+}

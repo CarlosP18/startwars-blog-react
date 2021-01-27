@@ -32,7 +32,7 @@ export const Char = () => {
 				<div
 					className="col-md-9 d-flex text-center justify-content-center flex-column"
 					style={{ "background-color": "black", opacity: "0.9" }}>
-					<h1>{char.name}</h1>
+					<h1 className="charName">{char.name}</h1>
 					<div className="row  text-light mt-3">
 						<div className="col-md-12 d-flex justify-content-between">
 							<div className="d-flex flex-column m-2 box col-md-2">

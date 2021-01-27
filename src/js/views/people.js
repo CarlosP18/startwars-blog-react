@@ -26,16 +26,14 @@ const People = () => {
 							return (
 								<div key={i} className="col-md-3 col-sm-6">
 									<div className="card bg-transparent mt-5 p-0">
-										<Link to={"/Char/" + charId}>
+										<Link to={"/People/" + charId}>
 											<img
 												src={`https://starwars-visualguide.com/assets/img/characters/${charId}.jpg`}
 												className="mycard-img-top img-fluid"
 												alt="..."
 											/>
 										</Link>
-										<div
-											to={"/Char/" + charId}
-											className="card-body text-white justify-content-end">
+										<div className="card-body text-white justify-content-end">
 											<h1 className="card-title"> {character.name} </h1>
 											<button
 												key={i}
@@ -43,14 +41,14 @@ const People = () => {
 												id=""
 												className={
 													isActive === false
-														? "btn btn-sm btn-outline-warning float-right"
-														: "btn btn-sm btn-warning float-right"
+														? "btn btn-sm notFavorite float-right"
+														: "btn btn-sm notFavorite float-right"
 												}
 												onClick={() => {
 													actions.getFavorites(character.name);
 													handleToggle();
 												}}>
-												<i className="far fa-star fa-md  bg-outline-warning" />
+												<i className="far fa-star fa-md" />
 											</button>
 										</div>
 										{/* <div className="card-footer text-right ">

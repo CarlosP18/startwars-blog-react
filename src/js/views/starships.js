@@ -3,8 +3,13 @@ import { Context } from "../store/appContext";
 import "../../styles/people.css";
 import test from "./../../img/test.jpg";
 import tittleImg from "../../img/starships.png";
+import { Link } from "react-router-dom";
 const Starships = () => {
 	const { store, actions } = useContext(Context);
+	const [isActive, setActive] = useState(false);
+	const handleToggle = () => {
+		setActive(!isActive);
+	};
 	return (
 		<>
 			<div className="container pt-5">
@@ -19,23 +24,48 @@ const Starships = () => {
 							return (
 								<div key={i} className="col-md-3">
 									<div className="card bg-transparent mt-5 p-0">
-										<img
-											src={`https://starwars-visualguide.com/assets/img/starships/${charId}.jpg`}
-											className="mycard-img-top img-fluid"
-											alt="..."
-										/>
+										<Link to={"/Starships/" + charId}>
+											<img
+												src={`https://starwars-visualguide.com/assets/img/starships/${charId}.jpg`}
+												className="mycard-img-top img-fluid"
+												alt="..."
+											/>
+										</Link>
 										<div className="card-body text-white">
 											<h1 className="card-title"> {ship.name} </h1>
-										</div>
-										<div className="card-footer text-right">
 											<button
+												key={i}
 												type="button"
 												id=""
-												className="btn btn-outline-warning btn-sm"
-												onClick="">
-												<i className="far fa-star bg-outline-warning" />
+												className={
+													isActive === false
+														? "btn btn-sm notFavorite float-right"
+														: "btn btn-sm notFavorite float-right"
+												}
+												onClick={() => {
+													actions.getFavorites(character.name);
+													handleToggle();
+												}}>
+												<i className="far fa-star fa-md" />
 											</button>
 										</div>
+										{/* <div className="card-footer text-right ">
+											<button
+												key={i}
+												type="button"
+												id=""
+												className={
+													isActive === false
+														? "btn btn-sm btn-outline-warning"
+														: "btn btn-sm btn-warning"
+												}
+												onClick={() => {
+													actions.getFavorites(character.name);
+													handleToggle();
+												}}>
+												<i className="far fa-star fa-md  bg-outline-warning" />
+											</button>
+										</div> */}
 									</div>
 								</div>
 							);
