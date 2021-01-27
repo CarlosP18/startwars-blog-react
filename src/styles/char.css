@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'sf_distant_galaxyregular';
+    src: url('font/sf_distant_galaxy-webfont.woff2') format('woff2'),
+         url('font/sf_distant_galaxy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sf_distant_galaxy_outlineRg';
+    src: url('font/sf_distant_galaxy_outline-webfont.woff2') format('woff2'),
+         url('font/sf_distant_galaxy_outline-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1{
+    font-family: 'sf_distant_galaxyregular';
+    font-size: 4rem;  
+    background: #AC8D45;
+    background: -webkit-linear-gradient(to top, #AC8D45 20%, #F4EFD4 50%, #AC8D45 79%);
+    background: -moz-linear-gradient(to top, #AC8D45 20%, #F4EFD4 50%, #AC8D45 79%);
+    background: linear-gradient(to top, #AC8D45 20%, #F4EFD4 50%, #AC8D45 79%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.iimage {
+    width: auto;
+    height: auto;
+  }
+
+  .box:hover .box-title {
+    color: black;
+  }
+  
+  .box-title {
+    font-size: 1rem;
+    font-weight: bold;
+    align-self: center;
+    color: rgb(209, 192, 93);
+  }
+  
+  .box-text {
+    font-size: 1rem;
+    align-self: center;
+    font-weight: bold;
+    word-wrap: break-word;
+  }
+
+  .box {
+    width: 12rem;
+    height: 12rem;
+    background-color: rgba(0, 0, 0, 0.521);
+    justify-content: center;
+    color: rgb(204, 178, 27);
+    vertical-align: middle;
+  }
+  
+  .box:hover {
+    background-color: #D6BB77;
+    color: black;
+  }

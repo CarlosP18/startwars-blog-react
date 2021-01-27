@@ -10,6 +10,7 @@ import NotFound from "./views/notFound";
 import Planets from "./views/planets";
 import Starships from "./views/starships";
 import Vehicles from "./views/vehicles";
+import { Char } from "./views/char";
 
 //create your first component
 const Layout = () => {
@@ -29,8 +30,8 @@ const Layout = () => {
 						<Route exact path="/people">
 							<People />
 						</Route>
-						<Route exact path="/people/:id">
-							<People />
+						<Route exact path="/Char/:id">
+							<Char />
 						</Route>
 						<Route exact path="/planets">
 							<Planets />

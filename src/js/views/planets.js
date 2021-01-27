@@ -2,22 +2,29 @@ import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/people.css";
 import test from "./../../img/test.jpg";
+import tittleImg from "../../img/planets.png";
 
 const Planets = () => {
 	const { store, actions } = useContext(Context);
 	return (
 		<>
 			<div className="container pt-5">
-				<div className="tittle text-center">
-					<h1 className="titulo">PLANETS</h1>
+				<div className="tittle d-flex justify-content-center">
+					<img src={tittleImg} alt="" className="img-fluid tittleImg" />
 				</div>
 				<div className="row">
 					{store.planets !== null ? (
 						store.planets.results.map((planet, i) => {
+							let char = planet.url.split("/");
+							let charId = char[char.length - 2];
 							return (
 								<div key={i} className="col-md-3">
 									<div className="card bg-transparent mt-5 p-0">
-										<img src={test} className="mycard-img-top img-fluid" alt="..." />
+										<img
+											src={`https://starwars-visualguide.com/assets/img/planets/${charId}.jpg`}
+											className="mycard-img-top img-fluid"
+											alt="..."
+										/>
 										<div className="card-body text-white">
 											<h1 className="card-title"> {planet.name} </h1>
 										</div>

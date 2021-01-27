@@ -2,22 +2,28 @@ import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/people.css";
 import test from "./../../img/test.jpg";
-
+import tittleImg from "../../img/vehicles.png";
 const vehicles = () => {
 	const { store, actions } = useContext(Context);
 	return (
 		<>
 			<div className="container pt-5">
-				<div className="tittle text-center">
-					<h1 className="titulo">VEHICLES</h1>
+				<div className="tittle d-flex justify-content-center">
+					<img src={tittleImg} alt="" className="img-fluid tittleImg" />
 				</div>
 				<div className="row">
 					{store.vehicles !== null ? (
 						store.vehicles.results.map((vehicle, i) => {
+							let char = vehicle.url.split("/");
+							let charId = char[char.length - 2];
 							return (
 								<div key={i} className="col-md-3">
 									<div className="card bg-transparent mt-5 p-0">
-										<img src={test} className="mycard-img-top img-fluid" alt="..." />
+										<img
+											src={`https://starwars-visualguide.com/assets/img/vehicles/${charId}.jpg`}
+											className="mycard-img-top img-fluid"
+											alt="..."
+										/>
 										<div className="card-body text-white">
 											<h1 className="card-title"> {vehicle.name} </h1>
 										</div>
