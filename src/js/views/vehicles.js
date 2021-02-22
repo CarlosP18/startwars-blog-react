@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
-import "../../styles/people.css";
+import "../../styles/people.scss";
 import test from "./../../img/test.jpg";
 import tittleImg from "../../img/vehicles.png";
 import { Link } from "react-router-dom";

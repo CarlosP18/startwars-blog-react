@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../../styles/people.css";
+import "../../styles/people.scss";
 import logo from "../../img/logo.png";
 
 export const Navbar = () => {
@@ -58,16 +58,32 @@ export const Navbar = () => {
 						</Link>
 					</li>
 					<li className="nav-item dropdown">
-						<Link
+						<a
 							className="nav-link dropdown-toggle"
-							to="#"
+							href="#"
 							id="navbarDropdownMenuLink"
 							role="button"
-							data-toggle="dropdown"
-							aria-haspopup="true"
+							data-bs-toggle="dropdown"
 							aria-expanded="false">
 							Favorites
-						</Link>
+						</a>
+						<ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+							<li>
+								<a className="dropdown-item" href="#">
+									Action
+								</a>
+							</li>
+							<li>
+								<a className="dropdown-item" href="#">
+									Another action
+								</a>
+							</li>
+							<li>
+								<a className="dropdown-item" href="#">
+									Something else here
+								</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</div>

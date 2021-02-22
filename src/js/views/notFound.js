@@ -4,10 +4,10 @@ import error from "../../img/404(1).png";
 
 function NotFound() {
 	return (
-		<div className="container-fluid  d-flex  h-100" style={{ "background-color": "white" }}>
-			<div className="col-12 d-flex p-5 justify-content-center 404">
-				<img className="error" src={error} alt="" />
-			</div>
+		<div
+			className="container-fluid h-100  d-flex justify-content-center   "
+			style={{ "background-color": "white" }}>
+			<img className="error mt-0 h-25 pb-5" src={error} alt="" />
 		</div>
 	);
 }
